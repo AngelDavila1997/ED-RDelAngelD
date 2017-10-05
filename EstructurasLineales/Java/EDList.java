@@ -58,6 +58,7 @@ public class EDList {
         Lista.showListFirstLast();
         System.out.println("\n");
         */
+        /*
         //MAIN DE LISTA CIRCULAR
         MyCList <String> Lista = new  MyCList() ;
         System.out.println("Inserta 10");
@@ -75,6 +76,23 @@ public class EDList {
         System.out.println("Borra 200");
         Lista.deleteNode("200");
         Lista.print();  
+        */
+        //MAIN DE STACK
+        Stack<String> pila = new Stack();
+    
+    //std::cout<<pila.getSize()<<"\n";
+    pila.push("1");
+    //std::cout<<pila.ge
+    pila.push("10");
+    pila.push("40");
+    pila.push("2");
+    pila.push("102");
+    pila.push("893");
+    pila.showStack();
+    String a = pila.getTop();
+    System.out.println("Mostramos el elemento" + a + "\n" + "Mostramos pila" + "\n");
+    pila.showStack();
+
     }
     
 }
