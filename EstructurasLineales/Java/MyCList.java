@@ -38,23 +38,23 @@ public class MyCList <T> {
         }
         length++;
     }
-    public void deleteNode(T d){
-        if(!isEmpty()){//Si hay elementos
-            pointer = pivot;
-            for(int i = 1; i<=length;i++){
-                if(pointer.next.data == d){//Da la vuelta
-                    pointer.next = pointer.next.next;
-                    if(pivot.data == d){
-                        pivot=pointer;
-                    }
-                    length--;
-                    pointer=null;
-                    i=length+1;//para que ya no entre
-                }
-                pointer=pointer.next;
+    public void deleteNode(T d) {
+        if(!isEmpty()){
+            if(pivot.data==d){
+                pivot=pivot.next;
+                length-=1;
+                return;
             }
+            pointer=pivot;
+            do{
+                if(pointer.next.data==d){
+                    pointer.next=pointer.next.next;
+                    pointer= null;
+                    length-=1;
+                    return;
+                } else pointer=pointer.next;
+            } while(pointer!= pivot);
         }
-        //Si no entra, no hay nada que borrar
     }
     //Vaciar lista
     public void deleteList(){

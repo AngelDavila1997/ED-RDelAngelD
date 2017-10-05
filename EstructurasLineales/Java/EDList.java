@@ -59,8 +59,22 @@ public class EDList {
         System.out.println("\n");
         */
         //MAIN DE LISTA CIRCULAR
-        
-        
+        MyCList <String> Lista = new  MyCList() ;
+        System.out.println("Inserta 10");
+        Lista.insert("10");
+        Lista.print();
+        System.out.println("Inserta 200");
+        Lista.insert("200");
+        Lista.print();
+        System.out.println("Inserta 30");
+        Lista.insert("30");
+        Lista.print();
+        System.out.println("Borra 30");
+        Lista.deleteNode("30");
+        Lista.print();
+        System.out.println("Borra 200");
+        Lista.deleteNode("200");
+        Lista.print();  
     }
     
 }
