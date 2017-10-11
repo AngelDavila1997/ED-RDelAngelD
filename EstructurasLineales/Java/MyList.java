@@ -49,16 +49,14 @@ public class MyList <T>{
     }
     //Inserta al final de la lista
     public void insertLast(T n){
-        Node node = new Node(n);
         if(isEmpty()){
-            first = node;
-            last = node;
-            node.next = null;
+            insertFirst(n);
         }else{
+            Node node = new Node(n);
             last.next = node;
             last = node;
+            length++;
         }
-        length++;
     }
     //Eliminar al principio
     public void deleteFirst(){

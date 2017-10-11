@@ -1,5 +1,6 @@
 #pragma once
-
+#ifndef Node_h
+#define Node_h
 #include <stdio.h>
 #include <iostream>
 using namespace std;
@@ -22,3 +23,4 @@ public:
 	void print();
 	void printS();
 };
+#endif 

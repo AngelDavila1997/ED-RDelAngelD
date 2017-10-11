@@ -18,8 +18,11 @@ public class Node <T>{
         this.data = d;
         this.next = null;//Apunta a nulo
     }
-     public void printS(){
+    public void printS(){
         System.out.println(data + "\n ↓");
+    }
+    public void print(){
+        System.out.print(data + "->");
     }
 }
 

@@ -18,14 +18,17 @@ public class EDList {
         /*
         //MAIN DE LISTA ENLAZADA
         MyList <String> Lista = new  MyList() ;
-        System.out.println("Inserta 10");
-        Lista.insertFirst("10");
+        System.out.println("Inserta 10 al principio");
+        Lista.insertLast("10");
         Lista.showList();
-        System.out.println("Inserta 200");
-        Lista.insertLast("200");
+        System.out.println("Inserta 200 al final");
+        Lista.insertFirst("200");
         Lista.showList();
-        System.out.println("Inserta 30");
+        System.out.println("Inserta 30 al final");
         Lista.insertLast("30");
+        Lista.showList();
+        System.out.println("Inserta 11 al principio");
+        Lista.insertFirst("11");
         Lista.showList();
         System.out.println("Borra 200");
         Lista.deleteNode("200");
@@ -77,22 +80,36 @@ public class EDList {
         Lista.deleteNode("200");
         Lista.print();  
         */
+        /*
         //MAIN DE STACK
         Stack<String> pila = new Stack();
-    
-    //std::cout<<pila.getSize()<<"\n";
-    pila.push("1");
-    //std::cout<<pila.ge
-    pila.push("10");
-    pila.push("40");
-    pila.push("2");
-    pila.push("102");
-    pila.push("893");
-    pila.showStack();
-    String a = pila.getTop();
-    System.out.println("Mostramos el elemento" + a + "\n" + "Mostramos pila" + "\n");
-    pila.showStack();
-
+        pila.push("1");
+        pila.push("10");
+        pila.push("40");
+        pila.push("2");
+        pila.push("102");
+        pila.push("893");
+        pila.showStack();
+        String a = pila.getTop();
+        System.out.println("Mostramos el elemento" + a + "\n" + "Mostramos pila" + "\n");
+        pila.showStack();
+        */
+        
+        //MAIN DE QUEUE
+        Queue<String> fila = new Queue();
+        fila.enqueue(" esta");
+        fila.enqueue(" es");
+        fila.enqueue(" una");
+        fila.enqueue(" fila");
+        fila.showQueue();
+        fila.dequeue();
+        fila.showQueue();
+        fila.enqueue(fila.dequeue());
+        fila.showQueue();
+        System.out.println(fila.getSize() + " elementos en la fila, |" + fila.getFront() + "| es el primer elemento de la fila");
+        fila.showQueue();
+        fila.clearQueue();
+        fila.showQueue();
     }
     
 }
