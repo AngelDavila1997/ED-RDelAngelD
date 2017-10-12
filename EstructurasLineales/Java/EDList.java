@@ -15,9 +15,10 @@ public class EDList {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+
         /*
         //MAIN DE LISTA ENLAZADA
-        MyList <String> Lista = new  MyList() ;
+        MyList <String> Lista = new  MyList();
         System.out.println("Inserta 10 al principio");
         Lista.insertLast("10");
         Lista.showList();
@@ -94,7 +95,7 @@ public class EDList {
         System.out.println("Mostramos el elemento" + a + "\n" + "Mostramos pila" + "\n");
         pila.showStack();
         */
-        
+        /*
         //MAIN DE QUEUE
         Queue<String> fila = new Queue();
         fila.enqueue(" esta");
@@ -110,6 +111,21 @@ public class EDList {
         fila.showQueue();
         fila.clearQueue();
         fila.showQueue();
+        */
+        
+        //MAIN DEQUE
+        Deque <String> fila = new Deque();
+        fila.enqueueFront(" esta");
+        fila.enqueueRear(" es");
+        fila.showDeque();
+        fila.enqueueFront("vava");
+        fila.showDeque();
+        fila.dequeueFront();
+        fila.showDeque();
+        fila.dequeueRear();
+        fila.showDeque();
+        fila.clearDeque();
+        fila.showDeque();
     }
     
 }

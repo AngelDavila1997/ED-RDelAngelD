@@ -2,10 +2,10 @@
 #include <iostream>
 #include <string>
 //#include "DLList.cpp"
-//#include "CList.cpp"
+#include "CList.cpp"
 //#include "Stack.cpp"
 //#include "List.cpp"
-#include "Queue.cpp"
+//#include "Queue.cpp"
 using namespace std;
 
 
@@ -26,8 +26,8 @@ int main(int argc, const char * argv[]) {
 	Lista.showList();
 	Lista.deleteNode("30");
 	Lista.showList();
-	*/
-	/*
+	*/	
+	
 	//MAIN DE LISTA CIRCULAR
 	CList <string> Lista = *new  CList<string>() ;
 	Lista.insert("10");
@@ -37,10 +37,10 @@ int main(int argc, const char * argv[]) {
 	Lista.insert("30");
 	Lista.showList();
 	Lista.deleteNode("30");
-	Lista.showList();
+	//Lista.showList();
 	Lista.deleteNode("200");
 	Lista.showList();
-	/*
+	
 	/*
 	DLList<string> Lista = *new DLList<string>();
 	
@@ -90,7 +90,7 @@ int main(int argc, const char * argv[]) {
 	//std::cout<<pila.getSize()<<"\n";
 	//pila.showStack();
 	*/
-	
+	/*
 	Queue<string> fila = *new Queue<string>;
 	fila.enqueue(" esta");
 	fila.enqueue(" es");
@@ -105,7 +105,7 @@ int main(int argc, const char * argv[]) {
 	fila.showQueue();
 	fila.clearQueue();
 	fila.showQueue();
-	
+	*/
 	cin.get();
 	return 0;
 }

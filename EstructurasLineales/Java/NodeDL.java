@@ -20,4 +20,8 @@ public class NodeDL <T>{
         this.next = null;//Apunta a nulo
         this.prev = null;//Apunta a nulo
     }
+    
+     public void print(){
+        System.out.print(data + "<=>");
+    }
 }
