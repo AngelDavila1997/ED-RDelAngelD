@@ -1,4 +1,7 @@
 #pragma once
+#ifndef DLList_h
+#define DLList_h
+
 #include <stdio.h>
 #include "DLNode.cpp"
 template <class T> class DLList {
@@ -22,3 +25,6 @@ public:
 	void showListBackward();
 	void showListbyAddress();
 };
+
+
+#endif /* DLList_hpp */

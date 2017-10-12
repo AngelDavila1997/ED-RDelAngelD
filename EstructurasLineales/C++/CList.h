@@ -1,6 +1,9 @@
 #pragma once
+#ifndef CList_hpp
+#define CList_hpp
+
 #include <stdio.h>
-#include "Node.h"
+#include "Node.cpp"
 
 template <class T> class CList {
 public:
@@ -19,3 +22,6 @@ public:
 	void showList();
 	void showListbyAddress();
 };
+
+
+#endif /* CList_hpp */

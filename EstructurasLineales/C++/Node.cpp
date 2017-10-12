@@ -1,4 +1,3 @@
-
 #include "Node.h"
 
 //Constructor por defecto
@@ -15,18 +14,17 @@ Node<T>::Node(T d) {
 }
 
 //Imprimir Nodo
-template <typename T> 
-void Node <T>::print() {
+template <typename T> void
+Node <T>::print() {
 	std::cout << data << "->";
 }
 
 //Imprimir Nodo para pila
-template <typename T> 
- void Node <T>::printS() {
-	std::cout << data << endl << "?" << endl;
+template <typename T> void
+Node <T>::printS() {
+	std::cout << data << endl << "|" << endl;
 }
 
 //Destructor
 template <typename T>
 Node<T>::~Node() {}
-

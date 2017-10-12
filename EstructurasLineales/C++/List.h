@@ -1,4 +1,7 @@
 #pragma once
+#ifndef List_h
+#define List_h
+
 #include <stdio.h>
 #include "Node.h"
 #include "Node.cpp"
@@ -23,3 +26,5 @@ public:
 	void showList();
 	void showListbyAddress();
 };
+
+#endif /* List_hpp */

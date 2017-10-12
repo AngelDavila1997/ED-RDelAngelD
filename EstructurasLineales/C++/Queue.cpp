@@ -7,7 +7,7 @@ Queue<T>::Queue() {
 }
 
 template <typename T>
-Queue<T>::Queue(T d) {//Al ingresar instanciamos un nodo y hacemos que front y rear apunten al nuevo nodo.
+Queue<T>::Queue(T d) {
 	Node<T> *node = new Node<T>(d);
 	front = rear = node;
 	size = 1;
@@ -19,7 +19,7 @@ Queue<T>::~Queue() {}
 template <typename T>
 void Queue<T>::enqueue(T d) {
 	Node<T> *node = new Node<T>(d);
-	if (isEmpty()) {//Si esta vacio
+	if (isEmpty()) {
 		front = rear = node;
 		size = 1;
 	}
@@ -31,15 +31,15 @@ void Queue<T>::enqueue(T d) {
 }
 
 template <typename T>
-T Queue<T>::dequeue() {//QUITAR (ELIMINA Y DEVUELVE)
+T Queue<T>::dequeue() {
 	if (isEmpty()) {
 		return NULL;
 	}
 	else {
-		Node<T> *fd = front; //Declara un apuntador
-		front = front->next; //Avanza front
-		size--;//Reduce el tamaño
-		return fd->data; //Regresa el dato del nodo borrado
+		Node<T> *fd = front;
+		front = front->next;
+		size--;
+		return fd->data;
 	}
 }
 
@@ -73,7 +73,7 @@ template <typename T>
 void Queue<T>::showQueue() {
 	std::cout << "front->";
 	Node<T>* p = front;
-	if (!p) std::cout << "NULL"; //Si el puntero es nulo es FALSO (aqui se niega el nulo por lo cual es VERDADERO)
+	if (!p) std::cout << "NULL";
 	while (p) {
 		p->print();
 		p = p->next;

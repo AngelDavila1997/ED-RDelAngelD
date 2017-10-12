@@ -1,4 +1,7 @@
 #pragma once
+#ifndef Queue_h
+#define Queue_h
+
 #include <stdio.h>
 #include "Node.cpp"
 
@@ -22,3 +25,4 @@ public:
 	void showQueue();
 
 };
+#endif /* Queue_hpp */
