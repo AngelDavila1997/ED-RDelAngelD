@@ -11,7 +11,7 @@ BinaryTree::BinaryTree(int d) {
 	leaves = 1;
 }
 
-BinaryTree:~BinaryTree();
+BinaryTree::~BinaryTree() {};
 
 void BinaryTree::insert(int d, Leaf *root) {
 	//Elementos iguales dependen del arbol
