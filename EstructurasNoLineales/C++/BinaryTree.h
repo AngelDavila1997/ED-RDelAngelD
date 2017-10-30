@@ -16,9 +16,11 @@ public:
 
 	void insert(int d, Leaf *root);
 	void showLeaf(Leaf *root);
-	void deleteLeaf(int d);
+	Leaf *fetch(int d, Leaf * root);
+	Leaf *getFather(Leaf * leaf, Leaf * root);
+	bool deleteLeaf(int d, Leaf * root);
 	bool isEmpty();
-	Leaf getRoot();
+	Leaf *getRoot();
 	int height(Leaf *root);
 	int getLeaves();
 };
