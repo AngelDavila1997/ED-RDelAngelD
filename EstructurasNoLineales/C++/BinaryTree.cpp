@@ -110,9 +110,22 @@ bool BinaryTree::deleteLeaf(int d, Leaf *root) {
 		return true;
 	}else if (l && r) {
 		//Eliminamos nodo segun caso 3
-		return true;
+		//Obtenemos el nodo mas a la izquierda de su derecha
+		Leaf *ml = mostLeft(s->right);//Se envia derecho del hijo
+		//Sustituimos el dato del nodo hijo por el de mas a las izquierda
+		s->setData(ml->getData());
+		//Eliminamos most left
+		return deleteLeaf(ml->getData(), ml);
 	}else {
 		return false;
+	}
+}
+
+Leaf *BinaryTree::mostLeft(Leaf *root) {
+	if (root->left) {//Si el hijo de la izquierda no es nulo
+		return mostLeft(root->left);
+	}else {
+		return root;
 	}
 }
 
@@ -152,4 +165,30 @@ int BinaryTree::getLeaves() {
 	return leaves;
 }
 
+//Muestra el contenido de un arbol
+//Izquierda-Centro-Derecha
+void BinaryTree::inOrden(Leaf *root) {
+	if (root) {
+		inOrden(root->left);
+		root->print;
+		inOrden(root->right);
+	}
+}
 
+//Centro-Izquierda-Derecho
+void BinaryTree::preOrden(Leaf *root) {
+	if (root) {
+		root->print;
+		preOrden(root->left);
+		preOrden(root->right);
+	}
+}
+
+//Izquierda-Derecho-Centro
+void BinaryTree::postOrden(Leaf *root) {
+	if (root) {
+		postOrden(root->left);
+		postOrden(root->right);
+		root->print;
+	}
+}

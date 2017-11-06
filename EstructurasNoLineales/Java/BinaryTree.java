@@ -120,10 +120,15 @@ public class BinaryTree {
         }
         return true;
       }else if(l && r){
-          //Eliminamos nodo segun caso 3
-          return true;
-      }else{
-          return false;
+          //Eliminamos nodo según caso 3
+        //Obtenemos el nodo mas a la izquierda de su derecha
+        Leaf ml = mostLeft(s.right);
+        //Sustituimos el dato del nodo hijo por el de mas a la izquierda
+        s.setData(ml.getData());
+        //Eliminamos most left
+        return deleteLeaf(ml.getData(), ml);
+    }else{
+        return false;
       }
     }
     
@@ -155,5 +160,40 @@ public class BinaryTree {
     }
     public int getLeaves(){
         return leaves;
+    }
+    public Leaf mostLeft(Leaf root){
+        if(root.left != null){
+            return mostLeft(root.left);
+        }else{
+            return root;
+        }
+    }
+    
+    //Muestra el contenido de un arbol
+//Izquierda-Centro-Derecha
+    public void inOrden(Leaf root){
+    if(root != null){
+        inOrden(root.left);
+        root.print();
+        inOrden(root.right);
+    }
+    }
+
+//Centro-Izquierda-Derecha
+    public void preOrden(Leaf root){
+    if(root != null){
+        root.print();
+        preOrden(root.left);
+        preOrden(root.right);
+    }
+    }
+
+//Izquierda-Derecha-Centro
+    public void postOrden(Leaf root){
+    if(root != null){
+        postOrden(root.left);
+        postOrden(root.right);
+        root.print();
+    }
     }
 }

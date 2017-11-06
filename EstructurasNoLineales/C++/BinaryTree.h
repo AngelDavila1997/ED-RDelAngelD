@@ -8,6 +8,7 @@ class BinaryTree {
 private:
 	Leaf *root;
 	int leaves;
+	Leaf *mostLeft(Leaf *root);
 
 public:
 	BinaryTree();
@@ -23,5 +24,8 @@ public:
 	Leaf *getRoot();
 	int height(Leaf *root);
 	int getLeaves();
+	void inOrden(Leaf * root);
+	void preOrden(Leaf * root);
+	void postOrden(Leaf * root);
 };
 #endif /*BinaryTree_h*/
