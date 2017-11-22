@@ -47,9 +47,7 @@ void CList<T>::deleteNode(T d) {
 				pointer = NULL;
 				i = length + 1;
 			}
-			else {
-				pointer = pointer->next;
-			}
+			pointer = pointer->next;
 		}
 	}
 }

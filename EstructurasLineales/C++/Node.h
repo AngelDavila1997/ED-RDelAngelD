@@ -23,5 +23,4 @@ public:
 	void print();
 	void printS();
 };
-
-#endif /* Node_hpp */
+#endif 
