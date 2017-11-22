@@ -25,7 +25,7 @@ double Edge::getWeight()
 	return this->weight;
 }
 
-std::string Edge::toString()
+std::string Edge::to_string()
 {
 	return std::to_string(this->dest) + " (" + std::to_string(this->weight) + ")";
 }

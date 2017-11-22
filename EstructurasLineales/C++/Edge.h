@@ -17,6 +17,6 @@ public:
 
 	int getDest();
 	double getWeight();
-	std::string toString();
+	std::string to_string();
 };
 #endif /*Edge_h*/

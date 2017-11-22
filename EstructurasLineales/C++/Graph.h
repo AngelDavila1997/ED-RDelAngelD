@@ -4,6 +4,9 @@
 
 #include "Edge.h"
 #include "List.cpp"
+#include "Stack.cpp"
+#include "Queue.cpp"
+#include <string>
 
 class Graph {
 private:
@@ -13,11 +16,14 @@ private:
 	//Apuntador a un arreglo
 
 	//Para Depth First Search y Breadth First Search
-	int *visited; //Apuntador a un vector de enteros
-	int visitOrder;//Orden de visita de los vertices
+	bool *visited; //Apuntador a un vector de enteros
+	std::string path;
+
+	std::string recursiveDFS(int origin);
 
 public:
 	//Metodos
+	Graph();
 	Graph(int v);
 	int getEdges();
 	int getVertices();
@@ -27,5 +33,7 @@ public:
 	void insertE(int s, int d, double w);//Inserta arista con peso
 	List<Edge> adjacentTo(int s);//Devuelve el vertice adjacente
 	std::string to_string();//Devuelve e grafo en una cadena
+	std::string BFS(int origin);
+	std::string DFS(int origin);
 };
 #endif /*Graph_h*/

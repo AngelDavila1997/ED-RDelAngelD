@@ -1,7 +1,4 @@
 #pragma once
-#ifndef DLNode_h
-#define DLNode_h
-
 #include <stdio.h>
 #include <iostream>
 template <class T> class DLNode {
@@ -14,4 +11,3 @@ public:
 	~DLNode();
 	void print();
 };
-#endif /* DLNode_hpp */
